@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация в интернет-магазине цветов 'Lavender'!</title>
+    <link rel="stylesheet" href="{% static 'vendor/css/register.css' %}">
+</head>
+<body>
+<h2>Регистрация в интернет-магазине цветов 'Lavender'!</h2>
+<form action="{% url 'register' %}" method="POST">
+    {% csrf_token %}
+    <div class="form-row">
+        <div class="col-md-6">
+            <label class="small mb-1" for="{{ form.username.id_for_label }}">Имя пользователя</label>
+            {{ form.username }}
+        </div>
+        <div class="col-md-6">
+            <label class="small mb-1" for="{{ form.email.id_for_label }}">Адрес электронной почты</label>
+
+            {{ form.email }}
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="small mb-1" for="{{ form.password1.id_for_label }}">Пароль</label>
+                {{ form.password1 }}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="small mb-1" for="{{ form.password2.id_for_label }}">Подтверждение
+                    пароля</label>
+                {{ form.password2 }}
+            </div>
+        </div>
+    </div>
+
+    <button type="submit">Зарегистрироваться</button>
+</form>
+<footer>
+    <p>&copy; 2024 Магазин цветов 'Lavender'. Все права защищены.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,107 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #FFC0CB;
+    color: #c71585;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.back-to-shop {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #FFC0CB;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.back-to-shop:hover {
+    background-color: #ff1493;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    margin-bottom: 100px;
+}
+
+.cart-items {
+    margin-top: 20px;
+}
+
+.cart-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-details h2 {
+    color: #333;
+}
+
+.item-details p {
+    color: #666;
+}
+
+.delete-btn {
+    background-color: #ff3333;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #cc0000;
+}
+.cart-actions {
+    position: absolute;
+    top: 130px;
+    right: 20px;
+}
+#checkout-btn {
+    background-color: #808080;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#checkout-btn:hover {
+    background-color: #2eb82e;
+}
+
+footer {
+    background-color: #333;
+    color: #FFC0CB;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

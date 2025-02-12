@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин цветов 'Lavender'</title>
+    <link rel="stylesheet" href="{% static 'vendor/css/product.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать в наш магазин цветов 'Lavender'!</h1>
+        <nav>
+            <ul>
+                <li><a class="button-pink" href="{% url 'main' %}">Главная</a></li>
+                <li><a class="button-pink" href="{% url 'product_cat' %}">Каталог</a></li>
+                <li><a class="button-pink" href="{% url 'contact_store' %}">Контакты</a></li>
+                {% if not request.user.is_authenticated %}
+                <li><a class="button-pink" href="{% url 'register' %}">Регистрация</a></li>
+                <li><a class="button-pink" href="{% url 'auth' %}">Авторизация</a></li>
+                {% endif %}
+                <li><a class="button-pink" href="{% url 'account' %}">Профиль пользователя</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="featured-products">
+            <h2>Популярные товары!</h2>
+            <!-- Здесь будут отображаться популярные товары -->
+        </section>
+
+        <section id="latest-products">
+            <h2>Новинки!</h2>
+            <!-- Здесь будут отображаться последние поступления товаров -->
+        </section>
+        <div class="image-container">
+            <img src="{% static 'vendor/images/Фотографии Цветов.jpg' %}" alt="Описание изображения">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Магазин цветов 'Lavender'. Все права защищены.</p>
+    </footer>
+</body>
+</html>

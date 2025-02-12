@@ -1,0 +1,119 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    background-color: #FFC0CB;
+    color: #c71585;
+    padding: 20px;
+    text-align: center;
+}
+/* CSS стиль для изображения профиля */
+.profile-picture {
+    max-width: 150px; /* Уменьшенная максимальная ширина изображения */
+    max-height: 150px; /* Уменьшенная максимальная высота изображения */
+    border-radius: 50%; /* Скругление углов, чтобы изображение было круглым */
+    border: 2px solid #ccc; /* Толщина и цвет рамки изображения */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Тень под изображением */
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #000; /* Black color */
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"] {
+    background-color: #ff69b4; /* Pink color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto; /* Center the button horizontally */
+}
+
+button[type="submit"]:hover {
+    background-color: #ff1493; /* Darker pink color on hover */
+}
+.button-bottom-left {
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 70px; /* Отступ снизу */
+    left: 300px; /* Отступ слева */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    background-color: #808080;
+    color: #fff; /* Цвет текста */
+    border: none; /* Убираем границу */
+    border-radius: 4px; /* Скругляем углы */
+    cursor: pointer; /* Устанавливаем указатель мыши */
+    transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+    z-index: 999; /* Поднять кнопку выше других элементов */
+    text-decoration: none;
+}
+
+
+footer {
+    background-color: #333;
+    color: #FFC0CB;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

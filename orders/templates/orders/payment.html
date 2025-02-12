@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата заказа</title>
+</head>
+<body>
+    <h1>Оплата заказа</h1>
+    <form id="payment-form">
+        <div id="card-element"><!-- Отображение элемента для ввода данных карты --></div>
+        <button id="submit-payment">Оплатить</button>
+    </form>
+
+    <!-- Скрипт Stripe.js для обработки оплаты -->
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <script>
+        var stripe = Stripe('{{ stripe_publishable_key }}'); // Публичный ключ Stripe
+
+        var elements = stripe.elements(); // Создание элементов Stripe
+
+        // Создание стилизованного элемента для ввода данных карты
+        var cardElement = elements.create('card');
+        cardElement.mount('#card-element');
+
+        // Обработка события отправки формы
+        document.getElementById('payment-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Отмена стандартного действия отправки формы
+
+            // Создание платежа
+            stripe.confirmCardPayment('{{ client_secret }}', {
+                payment_method: {
+                    card: cardElement,
+                    billing_details: {
+                        name: '{{ order.first_name }} {{ order.last_name }}',
+                        email: '{{ order.email }}'
+                    }
+                }
+            }).then(function(result) {
+                if (result.error) {
+                    // Ошибка при обработке платежа
+                    console.error(result.error.message);
+                } else {
+                    // Платеж успешно обработан
+                    console.log(result.paymentIntent);
+                    // Редирект на страницу подтверждения оплаты или другую страницу
+                    window.location.href = '/payment-success/';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

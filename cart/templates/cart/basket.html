@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="{% static 'vendor/css/cart.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Корзина</h1>
+        <a href="{% url 'main' %}" class="back-to-shop">Главная</a>
+        <a href="{% url 'product_cat' %}" class="back-to-shop">Каталог</a>
+        {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}" class="back-to-shop">Выйти</a>
+        {% endif %}
+    </header>
+
+    <main>
+        <div class="cart-items">
+            {% for item in cart_items %}
+                <div class="cart-item">
+                    <img src="{{ item.product.img.url }}" alt="{{ item.product.name }}">
+                    <div class="item-details">
+                        <h2>{{ item.product.name }}</h2>
+                        <p>{{ item.product.descriptions }}</p>
+                        <p>Цена: {{ item.product.price }} грн.</p>
+                        <p>Количество: {{ item.quantity }}</p>
+                        <form action="{% url 'remove_to_cart' item.product.id %}" method="post">
+                             {% csrf_token %}
+                        <button type="submit" class="delete-btn">Удалить товар</button>
+                        </form>
+                    </div>
+                </div>
+            {% empty %}
+                <p class="empty-cart">Ваша корзина пуста</p>
+            {% endfor %}
+        </div>
+        <form action="{% url 'checkout' %}" method="get">
+    {% csrf_token %}
+    <button type="submit" id="checkout-btn">Оформить заказ</button>
+</form>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Магазин цветов 'Lavender'. Все права защищены.</p>
+    </footer>
+</body>
+</html>

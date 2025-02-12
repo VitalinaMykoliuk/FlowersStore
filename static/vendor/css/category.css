@@ -1,0 +1,103 @@
+
+body {
+    font-family: Arial, sans-serif; /* используемый шрифт */
+    margin: 0; /* убираем внешние отступы */
+    padding: 0; /* убираем внутренние отступы */
+    background-color: #f8f8f8; /* цвет фона */
+}
+ul {
+    list-style-type: none; /* убираем маркеры списка */
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: inline; /* отображаем элементы списка в ряд */
+}
+
+.button-pink {
+    display: inline-block; /* делаем кнопки блочными элементами */
+    padding: 10px 20px; /* задаем отступы */
+    margin-right: 10px; /* добавляем небольшой отступ между кнопками */
+    text-decoration: none;
+    color: #ffffff; /* белый цвет текста */
+    background-color: #FFC0CB; /* розовый цвет фона */
+    border: 2px solid #FFC0CB; /* розовая рамка */
+    border-radius: 5px; /* скругляем углы */
+    transition: background-color 0.3s ease; /* плавное изменение цвета фона */
+}
+
+.button-pink:hover {
+    background-color: #ff1493; /* изменяем цвет фона при наведении */
+    border-color: #ff1493; /* изменяем цвет рамки при наведении */
+}
+
+
+/* Стили для контейнера заголовка */
+.title-container {
+    background-color: #FFC0CB; /* фон контейнера */
+    padding: 20px; /* внутренний отступ */
+    text-align: center; /* выравнивание текста по центру */
+
+}
+
+/* Стили для заголовка */
+.title {
+    color: #c71585; /* цвет текста */
+    font-size: 36px; /* размер текста */
+    margin: 0; /* убираем внешние отступы */
+}
+
+/* Стили для списка категорий */
+.category-list {
+    list-style: none; /* убираем маркеры списка */
+    padding: 0; /* убираем внутренние отступы */
+    margin: 20px; /* внешний отступ */
+}
+
+/* Стили для ссылок в списке категорий */
+.category-link {
+    text-decoration: none; /* убираем подчеркивание ссылок */
+    color: #c71585; /* цвет текста */
+    display: block; /* блочный элемент, чтобы ссылки занимали всю ширину */
+    padding: 10px; /* внутренний отступ */
+    margin-bottom: 5px; /* отступ снизу между ссылками */
+    border-radius: 5px; /* скругляем углы */
+    background-color: #FFD8E6; /* фон ссылок */
+    transition: background-color 0.3s ease; /* плавное изменение цвета при наведении */
+    max-width: 400px; /* задаем максимальную ширину */
+    margin: 3 auto;
+}
+
+/* Стили для ссылок при наведении курсора */
+.category-link:hover {
+    background-color: #FF1493; /* изменяем цвет фона при наведении */
+    color: #fff; /* изменяем цвет текста при наведении */
+}
+
+.image-container {
+    float: right;
+    width: 30%;
+    max-width: 100%;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: -250px auto 100px;
+    padding: 5px;
+    border-radius: 7%;
+}
+footer {
+    background-color: #333;
+    color: #FFC0CB;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

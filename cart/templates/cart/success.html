@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ваш заказ успешно оформлен</title>
+    <link rel="stylesheet" href="{% static 'vendor/css/success.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Магазин цветов 'Lavender'</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'main' %}">Главная</a></li>
+                <li><a href="{% url 'product_cat' %}">Каталог</a></li>
+                <li><a href="{% url 'contact_store' %}">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="confirmation">
+            <h2>Ваш заказ успешно оформлен!</h2>
+            <p>Спасибо за покупку! Мы очень ценим ваш выбор!</p>
+        </div>
+        <div class="image-container">
+            <img src="{% static 'vendor/images/images1.jpg' %}" alt="Описание изображения">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Магазин цветов 'Lavender'. Все права защищены.</p>
+    </footer>
+</body>
+</html>
+
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин цветов, 'Lavender'!</title>
+    <link rel="stylesheet" href="{% static 'vendor/css/catalog.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Магазин цветов, 'Lavender'!</h1>
+        <a href="{% url 'user_basket' %}" class="cart-button">Корзина</a>
+    </header>
+
+    <main>
+        <div class="flower-grid">
+            {% for product in products %}
+                <div class="flower-item">
+                    <img src="{{ product.img.url }}" alt="{{ product.name }}">
+                    <h2>{{ product.name }}</h2>
+                    <p>{{ product.descriptions }}</p>
+                    <p>Цена: {{ product.price }} грн.</p>
+                    <form action="{% url 'add_to_cart' product_id=product.id %}" method="post" class="add-to-cart-form">
+                           {% csrf_token %}
+                    <button type="submit" class="add-to-cart-btn">Добавить в корзину</button>
+                    </form>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Магазин цветов, 'Lavender'!!!. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
+
+

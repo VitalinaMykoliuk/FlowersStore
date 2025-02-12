@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Внесите данные о заказе!</title>
+    <link rel="stylesheet" href="{% static 'vendor/css/forms.css' %}">
+</head>
+<body>
+    <h1>Внесите данные о заказе!</h1>
+    <form action="{% url 'success_to_order' %}" method="post">
+        {% csrf_token %}
+        <label for="id_name">Name:</label><br>
+        <input type="text" id="id_name" name="name" value="{{ form.name.value }}" class="form-control" placeholder="Ivan"><br><br>
+
+        <label for="id_email">Email:</label><br>
+        <input type="email" id="id_email" name="email" value="{{ form.email.value }}" class="form-control" placeholder="ivanivanov@gmail.com"><br><br>
+
+        <label for="id_address">Address:</label><br>
+        <input type="text" id="id_address" name="address" value="{{ form.address.value }}" class="form-control" placeholder="Kyiv, Berkovetskaz, 45"><br><br>
+
+        <label for="id_message">Message:</label><br>
+        <textarea id="id_message" name="message" rows="4" cols="50" class="form-control" placeholder="Enter your message here">{{ form.message.value }}</textarea><br><br>
+
+        <input type="submit" value="Оформить заказ">
+    </form>
+    <footer>
+        <p>&copy; 2024 Магазин цветов 'Lavender'. Все права защищены.</p>
+    </footer>
+</body>
+</html>

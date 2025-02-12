@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="{% static 'vendor/css/register.css' %}">
+</head>
+<body>
+<h2>Авторизация</h2>
+{% if error_message %}
+    <p>{{ error_message }}</p>
+{% endif %}
+<form action="{% url 'auth' %}" method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+        <label class="small mb-1" for="{{ form.username.id_for_label }}">Имя пользователя</label>
+        {{ form.username }}
+    </div>
+    <div class="form-group">
+        <label class="small mb-1" for="{{ form.password.id_for_label }}">Пароль</label>
+        {{ form.password }}
+    </div>
+
+    <button type="submit">Войти</button>
+</form>
+
+<footer>
+    <p>&copy; 2024 Магазин цветов 'Lavender'. Все права защищены.</p>
+</footer>
+</body>
+</html>

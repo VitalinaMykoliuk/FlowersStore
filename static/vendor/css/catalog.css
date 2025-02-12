@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+
+}
+
+header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    color: #c71585;
+}
+
+h1 {
+    margin: 0;
+}
+
+.cart-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #FFC0CB;
+    color: #c71585;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.flower-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.flower-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.add-to-cart-btn {
+    background-color: #FFC0CB; /* Светло-розовый цвет */
+    color: #c71585; /* Цвет текста */
+    border: none; /* Убираем границу кнопки */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    border-radius: 5px; /* Закругляем углы */
+    cursor: pointer; /* Делаем курсор указателем */
+    transition: background-color 0.3s; /* Плавное изменение цвета при наведении */
+}
+
+.add-to-cart-btn:hover {
+    background-color: #FFA07A; /* Светло-розовый цвет при наведении */
+}
+
+.flower-item img {
+    width: 100%; /* Устанавливаем ширину изображения на 100% от родительского элемента */
+    height: auto; /* Устанавливаем высоту автоматически, чтобы сохранить пропорции */
+    max-width: 100%; /* Устанавливаем максимальную ширину изображения на 100% */
+    max-height: 200px; /* Устанавливаем максимальную высоту изображения */
+    object-fit: cover; /* Заполняем пространство изображения, сохраняя его пропорции */
+}
+
+footer {
+    background-color: #333;
+    color: #FFC0CB;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .flower-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}

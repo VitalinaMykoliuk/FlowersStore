@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Магазин цветов 'Lavender'</title>
+    <link rel="stylesheet" href="{% static 'vendor/css/contact.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Магазин цветов 'Lavender'!</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'main' %}">Главная</a></li>
+                <li><a href="{% url 'product_cat' %}">Каталог</a></li>
+                <li><a href="/about/">О нас</a></li>
+                <li><a href="/contacts/">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Наши контакты</h2>
+        <p>Наш магазин находится по адресу:</p>
+        <address>
+            улица Крещатик, 12,<br>
+            Город Киев,<br>
+            Страна Украина
+        </address>
+
+        <p>Телефон для связи: <a href="tel:+1234567890">+38 066 67 89 247</a></p>
+
+        <p>Вы также можете связаться с нами по электронной почте: <a href="mailto:info@example.com">info@example.com</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Магазин цветов 'Lavender'. Все права защищены.</p>
+    </footer>
+</body>
+</html>

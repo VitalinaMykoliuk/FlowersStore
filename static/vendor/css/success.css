@@ -1,0 +1,80 @@
+/* Файл стилей для страницы подтверждения успешного оформления заказа */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: #FFC0CB;
+    color: #c71585;
+    padding: 20px;
+    text-align: center;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #ff1493;
+}
+
+main {
+    padding: 20px;
+}
+
+.confirmation {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.confirmation h2 {
+    color: grey;
+    font-style: normal;
+}
+
+.confirmation p {
+    color: grey;
+    font-style: normal;
+    font-size: 18px;
+}
+.image-container {
+    text-align: center; /* Выравнивание содержимого по центру */
+    margin-top: 50px; /* Отступ сверху */
+}
+
+.image-container img {
+    display: block; /* Сделать изображение блочным элементом */
+    margin: 0 auto; /* Автоматическое выравнивание по горизонтали */
+    max-width: 100%; /* Установка максимальной ширины изображения */
+    height: auto; /* Автоматическое вычисление высоты в соответствии с пропорциями */
+    border-radius: 7%;
+}
+
+footer {
+    background-color: #333;
+    color: #FFC0CB;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

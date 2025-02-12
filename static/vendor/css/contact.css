@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif; /* Шрифт */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #FFC0CB; /* Фон шапки */
+    color: #c71585; /* Цвет текста в шапке */
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0; /* Убираем отступы */
+}
+
+nav ul {
+    list-style-type: none; /* Убираем маркеры у списка */
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Элементы списка в одну строку */
+    margin-right: 20px; /* Отступ между элементами */
+}
+
+nav ul li a {
+    color: white; /* Цвет текста ссылок в меню */
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Подчеркивание ссылки при наведении */
+}
+
+main {
+    padding: 20px;
+}
+
+address {
+    font-style: normal; /* Убираем курсив */
+}
+
+footer {
+    background-color: #333;
+    color: #FFC0CB;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
